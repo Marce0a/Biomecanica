@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para un artículo en LaTeX en español.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Qué tipo de documento estamos por comenzar:
+\documentclass[a4paper]{article}
+% Esto es para que el LaTeX sepa que el texto está en español:
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+
+%% Asigna un tamaño a la hoja y los márgenes
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Paquetes de la AMS
+\usepackage{amsmath, amsthm, amsfonts}
+%% Para añadir archivos con extensión pdf, jpg, png or tif
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+%% Primero escribimos el título
+\title{Biomecánica}
+\author{Equipo 2\\
+  \small Universidad Autónoma de Nuevo León\\
+  \small 1849885, 1908569, 1903060, 1992076, 1870820
+  \date{}
+}
+
+%% Después del "preámbulo", podemos empezar el documento
+
+\begin{document}
+%% Hay que decirle que incluya el título en el documento
+\maketitle
+
+%% Iniciamos "secciones" que servirán como subtítulos
+%% Nota que hay otra manera de añadir acentos
+\section{Introducci\'on}
+
+La atención a los modelos actuales del movimiento humano y animal surge de los tiempos prehistóricos cuando dibujaban en las cuevas algunas figuras y representaban movimientos humano y animal. Más tarde fueron la impresión personal de los artistas. Pero no fue hasta hace un siglo que este proceso de autointerpretación identificó un modelo más útil y objetivo con los primeros estudios que registraron patrones de movimiento en animales y humanos.
+Durante este relevamiento podrás notar los conceptos básicos de la biomecánica así como algunas de sus características, que a su vez podrán unir los aspectos más comunes y más importantes de esta misma.
+
+\section{Desarrollo}
+
+La biomecánica es un área tecnológica cuyo objetivo es analizar desde el punto de vista de la ingeniería los mecanismos de todo tipo utilizados por la naturaleza en los seres vivos.\cite{ff3}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{biomec3.jpeg}
+\caption{\label{fig:biomec3}Representación de la biomecánica.}
+\end{figure}
+La biomecánica busca lo siguiente: 
+\begin{itemize}
+    \item Predecir el comportamiento del cuerpo humano ante acciones mecánicas exteriores
+\end{itemize}
+\begin{itemize}
+    \item Reforzar y optimizar artificialmente el cuerpo humano en su comportamiento y desempeño
+\end{itemize}
+\begin{itemize}
+    \item Sustituir partes del cuerpo humano para garantizar su eficacia mecánica
+\end{itemize}
+
+El área de la biomecánica está muy relacionada con la bioingeniería cuyos logros están orientados a la biología humana, como el diseño y fabricación de prótesis óseas, marcapasos, órganos artificiales, instrumental clínico y quirúrgico, etcétera.
+
+Para estudiar el movimiento en esta área de estudio, se consideran tres aspectos distintos:
+\begin{itemize}
+    \item El control del movimiento que esta relacionado con los ámbitos psicológico y neurofisiológico.
+\end{itemize}
+\begin{itemize}
+    \item La estructura del cuerpo que se mueve, en el caso de los seres vivos es un sistema complejo compuesto de músculos, huesos, tendones, etc. Es la anatomía y fisiología.
+\end{itemize}
+\begin{itemize}
+    \item Las fuerzas, tanto externas (gravedad, viento, etc) como internas (producidas por el propio ser vivo), que producen el movimiento de acuerdo con las leyes de la física.
+\end{itemize}
+Los dos últimos aspectos permiten el estudio de los movimientos de los seres vivos desde un punto de vista fundamentalmente anatómico o estructural. Así, los movimientos que se deducen sobre todo de la estructura del sistema en movimiento (esquelético, articulaciones, tendones, músculos, etc.) aplicando tanto las leyes fisiológicas como físicas (mecánicas). 
+
+Las aplicaciones de la biomecánica se clasifican como:
+\begin{itemize}
+    \item Biomecánica medica: Técnicas de análisis del movimiento, músculo esquelético, de tejidos, cardiaco, vascular y respiratorio; desarrollo de biomateriales.
+\end{itemize}
+\begin{itemize}
+    \item Biomecánica Deportiva: El diseño de equipamiento para mejorar el rendimiento deportivo, análisis de movimientos deportivos para la prevención de lesiones, ayuda a analizar las destrezas motoras.
+\end{itemize}
+\begin{itemize}
+    \item Biomecánica Ocupacional: Diseño de puestos de trabajo, evaluación de riesgos laborales, análisis de puntos de estrés en una actividad determinada.
+\end{itemize}
+\begin{itemize}
+    \item Biomecánica Industrial: Evaluación de riesgos en el trabajo y desordenes por traumas acumulativos, encontrar y determinar los puntos de estrés en un trabajo determinado, diseño y valoración de pavimentos y complejos deportivos.
+\end{itemize}
+\begin{itemize}
+    \item Biomecánica Ambiental: Impacto de las vibraciones biomecánicas, en locomoción terrestre, acuática y aérea.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{biomec1.jpeg}
+\caption{\label{fig:biomec1}Brazo con sensores.}
+\end{figure}
+
+\cite{ff2}
+
+\section{Conclusi\'on}
+Al unificar diversas fuentes de información acerca de la Biomecanica, sus propósitos así como algunas de sus características, podemos observar la gran variedad de conocimientos que abarca de diversas áreas como lo son la mecánica y la biología.
+Esta misma podemos reflexionar acerca de la importancia que tiene en diferentes aspectos de la vida diaria, podemos aterrizar lo anteriormente dicho en un ámbito deportivo,  ya que esta ciencia tiene como una de sus finalidades  evitar lesiones y buscar las técnicas más eficaces para cualquier deportista, encontrando esos movimientos eficientes, que con el mínimo esfuerzo para el cuerpo, repercutan en el máximo rendimiento.
+Cabe recalcar que esta ciencia sigue en constantes revoluciones ya que poco a poco a lo largo de estos años se han ido innovando los diferentes productos resultantes de la aplicación de la Biomecanica, todo esto con el fin de poder obtener un constante estado del arte de esta ciencia y así poder darle una mejor calidad de vida al ser humano.
+
+\bibliographystyle{abbrv}
+\bibliography{sample}
+
+\end{document}
