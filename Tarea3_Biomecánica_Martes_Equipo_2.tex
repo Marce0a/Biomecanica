@@ -1,0 +1,126 @@
+
+\documentclass[a4paper]{article}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{amsmath, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+%
+\title{Biomecánica}
+\author{Equipo 2\\
+  \small Universidad Autónoma de Nuevo León\\
+  \small Tarea 3\\
+  \small Marcela Ortiz, Diego Ortega, Gabriel Vázquez, José Gálvez, Martín Villanueva\\
+  \date{}
+}
+
+\begin{document}
+\maketitle
+
+\section{Introducci\'on}
+En el presente trabajo hablaremos sobre la serie de Leibniz y como es su funcion para nosotros lograr sacar PI a partir de un metodo enseñado.  Posteriormente en Phyton comprobaremos el metodo con codigos que iremos desarrollando para lograr el objetivo. 
+
+El número π es uno de los más famosos de la matemática. Mide la relación que existe entre la longitud de una circunferencia y su diámetro. No importa cual sea el tamaño de la circunferencia, esta relación siempre va a ser la misma y va a estar representada por π. Este tipo de propiedades, que se mantienen sin cambios cuando otros atributos varían son llamadas constantes. π es una de las constantes utilizadas con mayor frecuencia en matemática, física e ingeniería. 
+
+Este método consiste en ir realizando operaciones matematicas sobre series infinitas de números hasta que la serie converge en el número ππ. Los suplementos Leibniz le mostrarán cómo se pueden usar las matemáticas más sofisticadas, en particular el cálculo matemático, en modelos económicos.  
+
+\section{Desarrollo}
+\subsection{Serie de Leibniz }
+
+En matemáticas, una secuencia de Madhava, además exitosa como una secuencia de Leibniz, es cualquier persona de las series originarios de una recolección de expresiones de series infinitas cada una de las cuales se considera que fueron descubiertas por Madhava de Sangamagrama (c. Estas expresiones son los desarrollos en serie de Maclaurin de las funcionalidades trigonométricas seno, coseno y arco tangente, y la situación particular del desarrollo en serie de potencias de la funcionalidad arco tangente, produciendo una fórmula para el cálculo de π.  
+
+Los desarrollos en series de potencias de las funcionalidades seno y coseno se llaman respectivamente serie seno de Madhava y serie coseno de Madhava. La serie de potencias de la funcionalidad arco tangente algunas veces se llama serie de Madhava-Gregory o serie de Gregory-Madhava. La fórmula para π se sabe como serie de Madhava-Newton o serie de Madhava-Leibniz; o además fórmula de Leibniz para pi, o serie de Leibnitz-Gregory-Madhava. Estas denominaciones extras para las múltiples series reflejan los nombres de los descubridores o divulgadores occidentales de las series respectivas.  
+
+Otra prueba del nivel de desarrollo de las matemáticas indias, que como el interés en las series infinitas y la utilización de un sistema decimal de base 10 además indica que era viable que el cálculo se hubiera desarrollado en India casi 300 años anterior a su origen identificado en el continente Europeo.  
+
+No obstante, en los escritos de miembros posteriores del colegio de astronomía y matemáticas de Kerala, como Nilakantha Somayaji y Jyeṣṭhadeva, tienen la posibilidad de descubrir atribuciones inequívocas de estas series a Madhava. Además tienen la posibilidad de rastrear en los trabajos de dichos astrónomos y matemáticos posteriores las demostraciones indias de dichos desarrollos en serie, que dan suficientes instrucciones sobre el enfoque que Madhava había adoptado para llegar a sus resultados.  
+
+A diferencia de la mayor parte de las civilizaciones anteriores, bastante incómodas con la iniciativa de infinito, Madhava aparecía complacido de poder operar con este criterio, especialmente con las series infinitas\cite{ff2}. 
+
+\subsection{Pi con la serie de Leibniz}
+
+Es precisamente Leibniz, uno de los padres fundadores del nuevo método, quien descubrió una de las fórmulas más bellas relacionadas con el número π, la llamada serie de Leibniz 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.2\textwidth]{calculo pi.png}
+\caption{\label{fig:biomec3}Fórmula para calcular pi.}
+\end{figure}
+
+donde los puntos suspensivos hay que entenderlos en el sentido de que cuantos más términos sumemos más nos aproximaremos al valor de π/4. 
+
+La serie anterior se obtiene como un caso particular de otra descubierta por James Gregory (1638-1675), la representación en serie de potencias de la función arcotangente: 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{formula2.png}
+\caption{\label{fig:biomec1}Serie de potencias de la función arcotangente.}
+\end{figure}
+
+En efecto, basta con hacer x =1 en la serie de Gregory para obtener la serie de Leibniz. A pesar de lo anterior, Leibniz descubrió su serie utilizando otras técnicas, técnicas geométricas fundamentalmente. 
+
+Es innegable la belleza de la fórmula de Leibniz y lógico que su autor sintiera tanta satisfacción por su descubrimiento, sin embargo, presenta algún problema de tipo práctico. Por ejemplo, para obtener 50 decimales exactos del número π es preciso sumar aproximadamente términos\cite{ff4}.
+
+
+
+
+\subsection{Código para obtener pi en Python:}
+
+\begin{verbatim}
+def NumeroN(n): 
+    numero = ((-1)**n)/((2*n)+1) 
+    return numero 
+ 
+pi = 0 
+for i in range(10000): 
+    pi = pi + NumeroN(i) 
+    print(pi*4) 
+\end{verbatim}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{codigopi.png}
+\caption{\label{fig:biomec1}Código escrito y debugueado para obtener el valor de pi.}
+\end{figure}
+
+\subsection{Código para obtener la gráfica de pi en Python:}
+
+\begin{verbatim}
+import numpy as np 
+import matplotlib.pyplot as plt 
+ 
+x, y = np.loadtxt('datos.txt', skiprows=1, usecols=[0,1], unpack= True) 
+print(x,y) 
+ 
+plt.plot(x,y) 
+plt.show() 
+\end{verbatim}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{codigograficapi.jpg}
+\caption{\label{fig:biomec1}Código escrito y debugueado para obtener la gráfica de pi.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{graficapi.png}
+\caption{\label{fig:biomec1}Gráfica de valores obtenidos de pi.}
+\end{figure}
+
+\section{Conclusi\'on}
+En el trabajo anterior demostramos como se puede llevar a cabo la realización de un metodo (en este caso de la Serie de Leibniz) a travez de Phyton formando códigos.  
+
+Se realizaron investigaciones diferenes para determinar cuál metodo era el mejor en cuanto a la resolución de nuestro problema que era “¿cómo sacar el numero pi?”, juntos como equipo determinamos que el método Leibniz era el que más nos favorecía en dicha tarea y problema presentado. Al unirnos como equipo se logro el objetivo principal que era demostrar o más bien comprobar que dicho metodo elegido funcionaba y era el mejor para nuestra tarea a realizar el dia de hoy. Con este método nos dimos cuenta que podemos encontrar maneras sencillas de obtener el número pi, puede llegar a ser un poco tardado, por la cantidad de valores que obtenemos, pero al final se acerca cada vez más.
+
+\bibliographystyle{abbrv}
+\bibliography{bib}
+
+\end{document}
